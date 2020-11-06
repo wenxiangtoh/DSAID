@@ -4,6 +4,9 @@ import numpy as np
 
 df = pd.read_csv('dataset.csv')
 
+# Dropping row if name column is Nan
+df.dropna(subset=['name'], inplace=True)
+
 # full_name data frame with split value columns
 full_name = df["name"].str.split(" ", n=1, expand=True)
 # Adding first_name column at position 0 using full_name data frame
