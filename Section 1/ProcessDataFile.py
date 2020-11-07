@@ -1,8 +1,10 @@
 # imported modules
 import pandas as pd
+import sys
 
 
-def processDatafile(file):
+def processDatafile(filePath):
+    file = filePath.split("\\")[3]
     # Read dataset.csv using pandas module
     df = pd.read_csv(file)
 
@@ -38,3 +40,6 @@ def processDatafile(file):
 
     # Write updated df to procesedDataSet.csv
     df.to_csv('processedDataSet.csv', index=False)
+
+
+processDatafile(sys.argv[1])
