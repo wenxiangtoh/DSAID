@@ -23,7 +23,7 @@ above_100 = []
 
 for idx, val in enumerate(df['price']):
     # Remove any zeros prepended to the price dataframe
-    nonZeroinFooter.append(str(val).lstrip('0'))
+    nonZeroinFooter.append(str(val).lstrip('0.'))
     if(val > 100):
         # Append true to temporary variable above_100
         above_100.append(str.lower("true"))
@@ -33,3 +33,5 @@ for idx, val in enumerate(df['price']):
 
 df['price'] = nonZeroinFooter
 df["above_100"] = above_100
+
+df.to_csv('processedDataSet.csv', index=False)
