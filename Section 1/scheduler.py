@@ -4,14 +4,13 @@ import time
 # import processDataFile python file
 import ProcessDataFile as pdf
 
-# Function to call processDataFile function
-
 
 def job():
+    # processDataFile function call
     pdf.processDatafile('dataset.csv')
 
 
-# Schedule to perform job at everyday 1am
+ # Schedule to perform job at everyday 1am
 schedule.every().day.at("01:00").do(job)
 
 while 1:
