@@ -16,4 +16,11 @@ df.insert(1, "last_name", full_name[1])
 # Dropping name column
 df.drop(columns=["name"], inplace=True)
 
-print(df)
+# Variable to temporary store price df values
+nonZeroinFooter = []
+
+for idx, val in enumerate(df['price']):
+    # Remove any zeros prepended to the price dataframe
+    nonZeroinFooter.append(str(val).lstrip('0'))
+df['price'] = nonZeroinFooter
+
