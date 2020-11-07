@@ -18,9 +18,18 @@ df.drop(columns=["name"], inplace=True)
 
 # Variable to temporary store price df values
 nonZeroinFooter = []
+# Variable to temporary store above_100 df values
+above_100 = []
 
 for idx, val in enumerate(df['price']):
     # Remove any zeros prepended to the price dataframe
     nonZeroinFooter.append(str(val).lstrip('0'))
-df['price'] = nonZeroinFooter
+    if(val > 100):
+        # Append true to temporary variable above_100
+        above_100.append(str.lower("true"))
+    else:
+        # Append false to temporary variable above_100
+        above_100.append(str.lower("false"))
 
+df['price'] = nonZeroinFooter
+df["above_100"] = above_100
