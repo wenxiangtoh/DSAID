@@ -65,7 +65,7 @@ Car (car_serialno, car_model, car_variant, car_weight, car_engineCubicCapacity, 
 VALUES
 ('123456', 'Toyota', 'New', 45, 120, 5000.00, 'K2346234', 'Alex'),
 ('234567', 'BMW', 'New', 50, 150, 10000.00, 'K3858392', 'Alan'),
-('346256', 'Hyundai', 'Old', 40, 100, 8000.00, 'K5632567', 'David'),
-('625324', 'Proton', 'Old', 60, 90, 4500.00, 'K3572534', 'Cheryl'),
+('346256', 'Hyundai', 'Old', 40, 100, 8000.00, 'K3858392', 'David'),
+('625324', 'Proton', 'Old', 60, 90, 4500.00, 'K2346234', 'Cheryl'),
 ('385375', 'Subaru', 'Old', 50, 80, 7000.00, 'K2874632', 'Susan');
 
